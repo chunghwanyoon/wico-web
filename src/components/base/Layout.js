@@ -7,7 +7,15 @@ import Footer from './Footer';
 const LayoutContainer = styled.div`
   color: #212529;
   background-color: white;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > div.contents-wrapper {
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+  }
 
   & > div,
   footer,
@@ -22,9 +30,11 @@ const LayoutContainer = styled.div`
 const Layout = withRouter(({ children, location, history }) => {
   return (
     <LayoutContainer>
-      <Header />
-      <div className="contents">{children}</div>
-      <Footer />
+      <div className="contents-wrapper">
+        <Header />
+        <div className="contents">{children}</div>
+        <Footer />
+      </div>
     </LayoutContainer>
   );
 });

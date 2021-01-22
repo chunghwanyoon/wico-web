@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import ContentContainer from '../components/base/ContentContainer';
+import UserSectionContainer from '../components/sections/UserSection';
+import { COLORS } from '../domain/colors';
 
 const IntroduceSectionContainer = styled.div`
   width: 100%;
@@ -25,7 +27,7 @@ const IntroduceSectionContainer = styled.div`
     line-height: 1.6;
 
     &.highlight {
-      color: #b22222;
+      color: ${COLORS.DEFAULT_RED};
       font-weight: 600;
     }
   }
@@ -41,10 +43,15 @@ const Main = ({ history }) => {
           </h1>
           <p className="highlight">W1CO 같은 팀</p>
           <p>여기서 만들 수 있어요.</p>
+          {/* temp */}
+          <br />
+          <br />
+          image goes here
+          {/* temp end */}
         </IntroduceSectionContainer>
       </ContentContainer>
-      <ContentContainer>
-        <div className="section-users">{/* components should set here */}</div>
+      <ContentContainer title="새로 가입한 사람들" backgroundColor="">
+          <UserSectionContainer />
       </ContentContainer>
       <ContentContainer>
         <div className="section-groups">{/* components should set here */}</div>

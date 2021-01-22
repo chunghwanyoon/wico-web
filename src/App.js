@@ -2,12 +2,16 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Layout from './components/base/Layout';
 import Main from './pages/Main';
+import GlobalStyle from './globalStyles';
 
 function App() {
   return (
-    <Layout>
-      <Main />
-    </Layout>
+    <>
+      <GlobalStyle />
+      <Layout>
+        <Main />
+      </Layout>
+    </>
   );
 }
 

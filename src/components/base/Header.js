@@ -13,6 +13,11 @@ const HeaderContainer = styled.div`
   color: white;
   min-height: 3.75rem;
 
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    min-height: 2rem;    
+  }
+
   div.navigation {
     width: 20%;
   }
@@ -42,6 +47,9 @@ const HeaderContainer = styled.div`
   img.logo {
     width: 100%;
     padding-right: 0.25rem;
+    @media (min-width: 768px) {
+      width: 25%;
+    }
   }
 `;
 
